@@ -1,5 +1,5 @@
 ---
-- hosts: sup
+- hosts: localhost
   sudo: yes
   tasks:
     - name: ansible create directory example
