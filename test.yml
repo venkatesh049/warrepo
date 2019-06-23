@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  sudo: yes
   tasks:
      - name: printing sample
        shell: echo the programe is executed
