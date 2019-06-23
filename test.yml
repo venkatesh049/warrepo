@@ -2,11 +2,5 @@
 - hosts: localhost
   sudo: yes
   tasks:
-    - name: ansible create directory example
-      file:
-        path: /home/ec2-user/devops_directory
-        state: directory
-    - name: ansible create directory example
-      file:
-        path: /home/ec2-user/devops_directory/vivek.txt
-        state: touch
+     - name: printing sample
+       shell: echo the programe is executed
