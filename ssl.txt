@@ -1,0 +1,47 @@
+Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
+Redirecting vhost in /etc/httpd/sites-enabled/venkatkaranam.ml.conf to ssl vhost in /etc/httpd/sites-available/venkatkaranam.ml-le-ssl.conf
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations! You have successfully enabled https://www.venkatkaranam.ml
+
+You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=www.venkatkaranam.ml
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/www.venkatkaranam.ml/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/www.venkatkaranam.ml/privkey.pem
+   Your cert will expire on 2019-08-26. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the "certonly" option. To non-interactively renew *all* of
+   your certificates, run "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+
+
+ cp /etc/httpd/sites-available/venkatkaranam.ml-le-ssl.conf /etc/httpd/sites-enabled/venkatkaranam.ml-le-ssl.conf
+    5  systemctl restart httpd
+    6  vim /etc/httpd/sites-available/venkatkaranam.ml
+    7  vim /etc/httpd/sites-available/venkatkaranam.ml-le-ssl.conf
+    8  mv /etc/httpd/sites-available/venkatkaranam.ml.conf /etc/httpd/sites-available/venkatkaranam.ml
+    9  systemctl restart httpd
+   10  vim /etc/httpd/sites-available/venkatkaranam.ml-le-ssl.conf
+   11  cd /etc/httpd/sites-available/
+   12  ls
+   13  vi venkatkaranam.ml-le-ssl.conf
+
+
+H14986054
+
