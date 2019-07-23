@@ -1,0 +1,9 @@
+enterprise data storage
+-------------------------
+data center- 
+
+hard diskk-->ssd(solid state device)/flash/NVMe(non volatile memory enterprise) -- people are moving to ssd becase of its spped.
+
+byte-KB-MB-GB-TB-PB(peta bytes)-EB(exa bytes)-ZB(zeta byte)
+
+how to check how many cpu's in linux
